@@ -1,29 +1,155 @@
-.navbar {
-  background-color: #003366;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-
-    li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-
-      &:hover {
-        text-decoration: underline;
-      }
+.section-1 {
+    background-color: #da291c;
+    ol,
+    li {
+        padding: 0;
+        list-style: none;
     }
-  }
+    .fs-container {
+        gap: 0;
+    }
+
+    @media (min-width: 768px) {
+        background-color: #fff;
+    }
+
+    &__top {
+        display: none;
+        @media (min-width: 768px) {
+            background-color: #dddd;
+            display: block;
+        }
+    }
+    &__top-links {
+        display: flex;
+        justify-content: end;
+        height: 48px;
+        align-items: center;
+        max-width: 1240px;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+    &__main {
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+        border-bottom: solid 1px #e7e7e7;
+        background-color: #da291c;
+        @media (min-width: 768px) {
+            background-color: #fff;
+        }
+        .container {
+            @media (min-width: 768px) {
+                padding: 35px 20px;
+                max-width: 1240px;
+                margin-inline: auto;
+            }
+        }
+        a {
+            color: #000 !important;
+            &:hover,
+            &:focus {
+                color: #000;
+            }
+        }
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        padding: 20px;
+
+        &:has([aria-expanded="true"]) {
+            column-gap: 30.5px;
+        }
+
+        @media (min-width: 768px) {
+            padding: 0;
+        }
+
+        img {
+            max-width: 118px;
+            margin-top: 12px;
+            @media (min-width: 768px) {
+                max-width: 164px;
+            }
+        }
+    }
+    &__links__list {
+        display: flex;
+        gap: 40px;
+        justify-content: end;
+        .recently-viewed-job-list {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    a {
+        color: #da291c;
+        text-transform: uppercase;
+        font-family: "Arial, sans-serif"; /* replaced $base-font-family */
+        font-weight: 700; /* replaced $font-weight_bold */
+        font-size: 14px; /* replaced $font-size-body-2 */
+        display: inline-block;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+    .mobile-menu-trigger {
+        background-color: #555555; /* replaced $dark-grey */
+        border: 0;
+        padding: 6px 10px;
+        &::before {
+            content: "\f0c9";
+            font-family: "Font Awesome solid";
+            color: #fff;
+        }
+        &[aria-expanded="true"] {
+            background-color: #da291c;
+            padding: 0;
+            &::before {
+                content: "\e59b"; /* Change to 'X' icon when menu is expanded */
+                color: #fff; /* Red color for the close icon */
+                font-size: 27px;
+                font-family: "Font Awesome light";
+            }
+        }
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .section-1__main-nav {
+        display: none;
+        transition: all 0.3s ease;
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    .section-1__main-nav.active {
+        display: block;
+        background-color: #fff;
+        width: 100%;
+        .section-1__links__list {
+            flex-direction: column;
+            padding: 25px 20px;
+            gap: 15px;
+            @media (min-width: 768px) {
+                flex-direction: row;
+                padding: 0;
+                justify-content: end;
+            }
+
+            .recently-viewed-job-list {
+                border-top: 1px solid #da291c;
+                padding-block: 25px;
+
+                a {
+                    color: #da291c !important;
+                }
+            }
+        }
+    }
 }
