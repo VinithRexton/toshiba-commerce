@@ -1,4 +1,7 @@
 import React from "react";
+// in main.jsx or App.jsx
+import './styles/style.css';
+
 
 const HeroHome = () => {
   return (
