@@ -3,7 +3,6 @@ import HeroHome from './components/HeroHome';
 import OpportunitiesSection from './components/OpportunitiesSection';
 import Footer from './components/Footer';
 
-
 export default function App() {
   return (
     <div className="App">
