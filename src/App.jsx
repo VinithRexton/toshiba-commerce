@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar';
 import HeroHome from './components/HeroHome';
-import Hero from './components/Hero';
-import Body from './components/Body';
+import OpportunitiesSection from './components/OpportunitiesSection';
 import Footer from './components/Footer';
 
 
@@ -10,8 +9,7 @@ export default function App() {
     <div className="App">
       <Navbar />
       <HeroHome/>
-      <Hero />
-      <Body />
+      <OpportunitiesSection />
       <Footer />
     </div>
   );
